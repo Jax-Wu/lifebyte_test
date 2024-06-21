@@ -1,10 +1,11 @@
 # COCLUSION
-# COMMENT 1: in users table, server == '54203B42716FE7C40138AE6C4913EBBC', only contains 3 users, which may be an issue
-# COMMENT 2: like what was discovered in users table, in trades table, server == '54203B42716FE7C40138AE6C4913EBBC', only contains 571 records, which may be an issue
-# COMMENT 3: In trades table, there exist 5026 users that dont't belong to users table
-# COMMENT 4: In trades table, one abnormal record with volume==0 exists
-# COMMENT 5: In trades table, serveral records with open_time == close_time exist, which is abnormal
-# COMMENT 6: a number of records' date difference between close_time and open_time are very large, more than 365 days, which may be an issue
+# COMMENT 1: duplicated records exist in users table. 1000 records remain 666 after dropping duplicates.
+# COMMENT 2: in users table, server == '54203B42716FE7C40138AE6C4913EBBC', only contains 3 users, which may be an issue
+# COMMENT 3: like what was discovered in users table, in trades table, server == '54203B42716FE7C40138AE6C4913EBBC', only contains 571 records, which may be an issue
+# COMMENT 4: In trades table, there exist 5026 users that dont't belong to users table
+# COMMENT 5: In trades table, one abnormal record with volume==0 exists
+# COMMENT 6: In trades table, serveral records with open_time == close_time exist, which is abnormal
+# COMMENT 7: a number of records' date difference between close_time and open_time are very large, more than 365 days, which may be an issue
 
 
 import psycopg2
